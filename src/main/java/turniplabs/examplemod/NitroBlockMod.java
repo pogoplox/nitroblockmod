@@ -17,9 +17,9 @@ public class NitroBlockMod implements ModInitializer {
 
     public static final Block nitroblock = new BlockBuilder(MOD_ID)
             .setBlockSound(new BlockSound("step.grass", "step.grass", 1.0f, 1.0f))
-            .setSideTextures("tnt_side.png")
-            .setTopTexture("tnt_top.png")
-            .setBottomTexture("tnt_bottom.png")
+            .setSideTextures("nitroblock.png")
+            .setTopTexture("nitroblock_top.png")
+            .setBottomTexture("nitroblock_top.png")
             .build(new NitroBlock("nitroblock", 1003, Material.explosive,3.0f));
 
     @Override
