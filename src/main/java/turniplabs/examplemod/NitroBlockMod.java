@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.helper.RecipeHelper;
-import useless.prismaticlibe.helper.SoundHelper;
 
 
 public class NitroBlockMod implements ModInitializer {
@@ -59,10 +58,10 @@ public class NitroBlockMod implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("ExampleMod initialized.");
 
-        RecipeHelper.Crafting.createRecipe(nitroblock, 1, new Object[]{"RRR","RTR","RRR", 'R' , Item.dustRedstone, 'T', Block.tnt});
+        RecipeHelper.Crafting.createRecipe(tntBlock, 1, new Object[]{"RRR","RTR","RRR", 'R' , Item.paper, 'T', Block.tnt});
 
+        RecipeHelper.Crafting.createRecipe(nitroblock, 1, new Object[]{"RRR","RTR","RRR", 'R' , Item.nethercoal, 'T', tntBlock});
 
-        SoundHelper.addSound(MOD_ID,"crash_tnt_explosion.ogg");
         EntityHelper.createTileEntity(TileEntityNewTnt.class, "TileEntityNewTnt");
 
 
